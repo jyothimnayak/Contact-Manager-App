@@ -1,0 +1,48 @@
+<!-- <div class="form-container mat-elevation-z5">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input matInput placeholder="Email address" formControlName="email" />
+      <mat-error *ngIf="email?.errors?.['required']">
+        Email address is required
+      </mat-error>
+      <mat-error *ngIf="email?.errors?.['email']">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" formControlName="password" />
+      <mat-error *ngIf="password?.errors?.['required']">
+        Password is required
+      </mat-error>
+    </mat-form-field>
+    <div class="center margin-top">
+        <button type="submit" mat-raised-button color="primary">Login</button>
+    </div>
+    <span class="center margin-top">New to our platform? <a class="sign-up-link" routerLink="/sign-up">Sign up!</a></span>
+  </form>
+</div> -->
+<div class="main">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 style="text-align: center;"><b>Sign In</b></h1>
+<br>
+<p style="text-align: center;">Dont have an account?<a class="sign-up-link" style="color:blue" routerLink="/sign-up">Sign Up</a> </p>
+<br>
+<form [formGroup]="loginForm" (ngSubmit)="submit()" >
+<mat-label>Email</mat-label>
+<br>
+<mat-form-field appearance="outline" style="width: 100%; " >
+  <input type="email" matInput placeholder="" formControlName="email" />
+</mat-form-field>
+<br>
+<mat-label>Password</mat-label>
+<br>
+<mat-form-field appearance="outline" style="width: 100%; " >
+  <input matInput placeholder="" formControlName="password" />
+  <mat-hint align="end" ><a href="Forgot" style="color:blue">Forgot your Password?</a></mat-hint>
+</mat-form-field>
+<br>
+<br>
+<button mat-raised-button color="primary" style="width: 100%;text-align: start; "><i style="font-size:24px;padding-right: 40%;" class="fa">&#xf023;</i> Sign In</button>
+</form>
+</div>
