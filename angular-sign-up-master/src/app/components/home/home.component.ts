@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,8 @@ export class HomeComponent implements OnInit {
   contactForm!: FormGroup;
   ContactList: any[];
 
-  constructor(private fb:FormBuilder) { 
+  constructor(private fb:FormBuilder, private authService: AuthService,
+    private router: Router,) { 
     this.ContactList=[];
         this.contactForm=this.fb.group({
           name:['',Validators.required],
@@ -29,5 +32,9 @@ export class HomeComponent implements OnInit {
   reset(){
     this.contactForm.reset();
   }
-
+  logout() {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['']);
+    });
+  }
 }
