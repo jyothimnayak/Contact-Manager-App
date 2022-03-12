@@ -1,7 +1,7 @@
 # Contact-Manager-App
-Angular application.
+It is an Angular application which contains 3 samples sign in page, sign up page and contact list page.
 
-steps to run the contact-manager-app.
+#steps to run the contact-manager-app.
 
 1.download repos.
 
