@@ -11,3 +11,11 @@
 5.Now enter the command "ng serve" and press enter, in which our application will run on localhost with default port number 4200.
 
 6.open http://localhost:4200 in browser(google chrome)
+
+
+note:
+make sure you have install angular cli and nodejs in your system
+Install the CLI using the npm package manager:
+npm install -g @angular/cli
+
+install nodejs using=> https://nodejs.org/en/download/
